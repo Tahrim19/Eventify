@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const { getAllEvents, createEvent, updateEvent, deleteEvent,UserData, getUsers } = require('./controllers/eventController');
+const { getAllEvents, createEvent, updateEvent, deleteEvent,UserData, getUsers } = require('./eventController');
 
 const app = express();
 const port = 5000;
