@@ -2,11 +2,12 @@ const mysql = require('mysql2');
 
 // MySQL database connection
 const db = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'root',
-  database: 'Event_booking',
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
 });
+
 
 // Function to get all events from AllEvents
 const getAllEvents = (req, res) => {
