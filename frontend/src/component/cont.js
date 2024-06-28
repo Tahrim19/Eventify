@@ -13,15 +13,17 @@ const Cont = ({ upcom, onDelete, onUpdateClick }) => {
     }
   };
 
-  const formatDate = (dateString) => {
-    return format(new Date(dateString), 'MMMM do, yyyy');
-  };
+  // const formatDate = (dateString) => {
+  //   return format(new Date(dateString), 'MMMM do, yyyy');
+  // };
 
   return (
     <>
       <div id="upcom-div">
         <h3 className="pt-3 ps-2">{upcom.Name}</h3>
-        <p className="ps-2">{formatDate(upcom.Date)}</p>
+        {/* // <p className="ps-2">{formatDate(upcom.Date)}</p> */}
+        <p className="ps-2">{upcom.Date}</p>
+
         <p className="ps-2">{upcom.Place}</p>
         <button type="button" className="btn btn-danger delete-btn" onClick={handleDelete}>Delete</button>
         <button type="button" className="btn btn-success update-btn" onClick={() => onUpdateClick(upcom)}>Update</button>
